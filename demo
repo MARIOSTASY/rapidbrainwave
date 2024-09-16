@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidBrainwave - Encyclopedia and 2D Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://b.scdn.gr/images/sku_images/051200/51200461/xlarge_20211020163552_314acc66.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        #logo {
+            width: 100px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            font-family: 'Arial Black', Arial, sans-serif;
+            color: black;
+        }
+        #encyclopedia img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .button-container div {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .button-container div a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background-color: #f0f0f0;
+            border: 2px solid black;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj" alt="RapidBrainwave Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#encyclopedia">Encyclopedia</a></li>
+                <li><a href="#game">2D Game</a></li>
+                <li><a href="https://www.youtube.com/@rapidbrainwave" target="_blank">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Button Navigation -->
+        <div class="button-container">
+            <div><a href="#encyclopedia">ENCYCLOPEDIA</a></div>
+            <div><a href="#game">2D ADVENTURE GAME</a></div>
+            <div><a href="https://www.youtube.com/@rapidbrainwave" target="_blank">RAPIDBRAINWAVE YOUTUBE</a></div>
+        </div>
+
+        <!-- Encyclopedia -->
+        <section id="encyclopedia">
+            <h2>Encyclopedia</h2>
+            <img src="https://st.depositphotos.com/1000152/4215/i/450/depositphotos_42154745-stock-photo-open-books.jpg" alt="Encyclopedia Image">
+            <div id="encyclopedia-content">
+                <h3>1. Reproduction</h3>
+                <p>Reproduction is the process by which organisms create offspring, ensuring the continuity of the species...</p>
+                <h3>2. Cell Biology</h3>
+                <p>Cell biology is the study of cell structure and function, which is the fundamental unit of life...</p>
+                <h3>3. Genetics</h3>
+                <p>Genetics is the branch of biology that studies the inheritance of traits from parents to offspring via genes...</p>
+                <!-- More paragraphs for the encyclopedia (You can add more sections up to 60 here) -->
+                <h3>60. Meteorology</h3>
+                <p>Meteorology is the science that studies the atmosphere and weather phenomena...</p>
+            </div>
+        </section>
+
+        <!-- 2D Game -->
+        <section id="game">
+            <h2>2D Adventure Game</h2>
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <script>
+                const canvas = document.getElementById('gameCanvas');
+                const ctx = canvas.getContext('2d');
+
+                let player = { x: 50, y: 500, width: 50, height: 50, color: 'blue', speed: 5 };
+                let obstacles = [
+                    { x: 200, y: 450, width: 50, height: 50 },
+                    { x: 400, y: 400, width: 50, height: 50 },
+                    { x: 600, y: 350, width: 50, height: 50 }
+                ];
+                let level = 1;
+                let gameOver = false;
+                let win = false;
+
+                function drawPlayer() {
+                    ctx.fillStyle = player.color;
+                    ctx.fillRect(player.x, player.y, player.width, player.height);
+                }
+
+                function drawObstacles() {
+                    ctx.fillStyle = 'red';
+                    obstacles.forEach(obstacle => {
+                        ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+                    });
+                }
+
+                function clearCanvas() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+
+                function checkCollision() {
+                    for (let obstacle of obstacles) {
+                        if (
+                            player.x < obstacle.x + obstacle.width &&
+                            player.x + player.width > obstacle.x &&
+                            player.y < obstacle.y + obstacle.height &&
+                            player.y + player.height > obstacle.y
+                        ) {
+                            gameOver = true;
+                        }
+                    }
+
+                    // Check win condition
+                    if (player.x > canvas.width - player.width) {
+                        if (level >= 100) {
+                            win = true;
+                        } else {
+                            level++;
+                            player.x = 50;
+                            player.y = 500;
+                            obstacles.push({
+                                x: Math.random() * (canvas.width - 100) + 100,
+                                y: Math.random() * (canvas.height - 200) + 100,
+                                width: 50,
+                                height: 50
+                            });
+                        }
+                    }
+                }
+
+                function gameLoop() {
+                    if (!gameOver && !win) {
+                        clearCanvas();
+                        drawPlayer();
+                        drawObstacles();
+                        checkCollision();
+                        requestAnimationFrame(gameLoop);
+                    } else if (win) {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.font = '40px Arial';
+                        ctx.fillText('You Win! Congratulations!', 200, 300);
+                    } else if (gameOver) {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.font = '40px Arial';
+                        ctx.fillText('Game Over! Try Again!', 200, 300);
+                    }
+                }
+
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'ArrowRight') {
+                        player.x += player.speed;
+                    } else if (event.key === 'ArrowLeft') {
+                        player.x -= player.speed;
+                    } else if (event.key === 'ArrowUp') {
+                        player.y -= player.speed;
+                    } else if (event.key === 'ArrowDown') {
+                        player.y += player.speed;
+                    }
+                });
+
+                gameLoop();
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by: Marios D. Tasoulas
+         <p>Code Writter by: Chat GPT
