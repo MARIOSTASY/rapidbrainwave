@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidBrainwave</title>
+    <link rel="icon" href="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj">
+    <style>
+        body {
+            background-color: #f9dd16;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-family: 'Arial Black', sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            flex: 1;
+        }
+        .box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .box h2 {
+            margin: 0 0 15px;
+            font-size: 1.5rem;
+        }
+        .box canvas {
+            max-width: 100%;
+            border: 2px solid #000;
+            border-radius: 4px;
+        }
+        .menu-button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .menu-button:hover {
+            background-color: #555;
+        }
+        .statistics {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .statistics h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-top: 1px solid #444;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>RapidBrainwave</h1>
+    </header>
+
+    <div class="statistics">
+        <h3>Site Statistics</h3>
+        <p>Daily Visits: <span id="dailyVisits">0</span></p>
+        <p>Weekly Visits: <span id="weeklyVisits">0</span></p>
+        <p>Total Visits: <span id="totalVisits">0</span></p>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h2>Game 1</h2>
+            <canvas id="gameCanvas" width="300" height="200"></canvas>
+            <button class="menu-button">Play</button>
+        </div>
+        <div class="box">
+            <h2>Game 2</h2>
+            <canvas id="gameCanvas2" width="300" height="200"></canvas>
+            <button class="menu-button">Play</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RapidBrainwave. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate fetching statistics data
+            const dailyVisits = Math.floor(Math.random() * 1000);
+            const weeklyVisits = Math.floor(Math.random() * 7000);
+            const totalVisits = Math.floor(Math.random() * 50000);
+
+            // Update statistics in DOM
+            document.getElementById('dailyVisits').textContent = dailyVisits;
+            document.getElementById('weeklyVisits').textContent = weeklyVisits;
+            document.getElementById('totalVisits').textContent = totalVisits;
+        });
+    </script>
+
+</body>
+</html>
+
+    <div class="container">
+        <!-- Εγκυκλοπαίδεια -->
+        <div class="box" id="encyclopedia">
+            <h2>ENCYCLOPEDIA</h2>
+            <p><h3>1. Introduction to Science</h3>
+                <p>Science is a systematic enterprise that builds and organizes knowledge in the form of testable explanations and predictions about the universe.</p>
+
+                <h3>2. Astronomy</h3>
+                <p><strong>Overview:</strong> Astronomy is the study of celestial objects, space, and the universe as a whole.</p>
+                <p><strong>Key Concepts:</strong>
+                <ul>
+                    <li><strong>Celestial Bodies:</strong> Includes stars, planets, moons, and galaxies.</li>
+                    <li><strong>Cosmology:</strong> The study of the origin and evolution of the universe.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Astronomy helps in understanding the universe's structure and our place in it.</p>
+                <p><strong>Sources:</strong> Hawking, S. (1988). *A Brief History of Time*. Bantam Books. Krauss, L. M. (2012). *A Universe from Nothing*. Free Press.</p>
+
+                <h3>3. Biology</h3>
+                <p><strong>Overview:</strong> Biology is the study of living organisms, their structure, function, growth, and evolution.</p>
+                <p><strong>Key Areas:</strong>
+                <ul>
+                    <li><strong>Cell Biology:</strong> Study of cell structure and function.</li>
+                    <li><strong>Genetics:</strong> Study of heredity and variation in organisms.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Biology has applications in medicine, agriculture, and environmental science.</p>
+                <p><strong>Sources:</strong> Campbell, N. A., et al. (2014). *Biology*. Pearson. Alberts, B., et al. (2002). *Molecular Biology of the Cell*. Garland Science.</p>
+
+                <h3>4. Chemistry</h3>
+                <p><strong>Overview:</strong> Chemistry is the science of matter and its interactions with energy and itself.</p>
+                <p><strong>Key Areas:</strong>
+                <ul>
+                    <li><strong>Organic Chemistry:</strong> Study of carbon-containing compounds.</li>
+                    <li><strong>Inorganic Chemistry:</strong> Study of inorganic compounds and materials.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Chemistry is essential in developing new materials, pharmaceuticals, and energy sources.</p>
+                <p><strong>Sources:</strong> Brown, T. L., et al. (2018). *Chemistry: The Central Science*. Pearson. McMurry, J., & Fay, R. C. (2014). *Chemistry*. Pearson.</p>
+
+                <h3>5. Computer Science</h3>
+                <p><strong>Overview:</strong> Computer science is the study of computers and computational systems, including their theoretical foundations, hardware, and software.</p>
+                <p><strong>Key Areas:</strong>
+                <ul>
+                    <li><strong>Algorithms:</strong> Study of step-by-step procedures for calculations.</li>
+                    <li><strong>Programming:</strong> Writing code to create software and applications.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Computer science is integral to technology, from software development to artificial intelligence.</p>
+                <p><strong>Sources:</strong> Knuth, D. E. (1997). *The Art of Computer Programming*. Addison-Wesley. Sedgewick, R., & Wayne, K. (2011). *Algorithms*. Addison-Wesley.</p>
+
+                <h3>6. Physics</h3>
+                <p><strong>Overview:</strong> Physics is the study of matter, energy, and the fundamental forces of nature.</p>
+                <p><strong>Key Concepts:</strong>
+                <ul>
+                    <li><strong>Mechanics:</strong> Study of motion and forces.</li>
+                    <li><strong>Electromagnetism:</strong> Study of electric and magnetic fields and their interactions.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Physics is fundamental to understanding the universe and has applications in engineering, technology, and various scientific fields.</p>
+                <p><strong>Sources:</strong> Halliday, D., Resnick, R., & Walker, J. (2013). *Fundamentals of Physics*. Wiley. Feynman, R. P. (1963). *The Feynman Lectures on Physics*. Addison-Wesley.</p>
+
+                <!-- New Entries -->
+
+                <h3>36. Bacteria</h3>
+                <p><strong>Overview:</strong> Bacteria are single-celled microorganisms that play crucial roles in various ecological processes and human health.</p>
+                <p><strong>Types and Classification:</strong>
+                <ul>
+                    <li><strong>Shapes:</strong> Bacteria come in various shapes, including spherical (cocci), rod-shaped (bacilli), and spiral (spirilla).</li>
+                    <li><strong>Functions:</strong> Bacteria can be beneficial (e.g., gut microbiota) or pathogenic (causing diseases).</li>
+                </ul></p>
+                <p><strong>Scientific Importance:</strong> Bacteria are essential for nutrient cycling, bioremediation, and biotechnology applications, such as antibiotic production and genetic engineering.</p>
+                <p><strong>Sources:</strong> Madigan, M. T., & Martinko, J. M. (2005). *Brock Biology of Microorganisms*. Pearson. Berg, J. M., Tymoczko, J. L., & Gatto, G. J. (2015). *Biochemistry*. W.H. Freeman and Company.</p>
+
+                <h3>37. Ballet</h3>
+                <p><strong>Overview:</strong> Ballet is a highly technical form of dance characterized by its precision, grace, and formal structure, originating in the Italian Renaissance courts and evolving through the French and Russian traditions.</p>
+                <p><strong>Historical Development:</strong>
+                <ul>
+                    <li><strong>Early Ballet:</strong> Ballet began as court entertainment in the 15th and 16th centuries, with significant developments in France under Louis XIV.</li>
+                    <li><strong>Classical Ballet:</strong> The 19th century saw the establishment of classical ballet, with famous works such as *Swan Lake* and *The Nutcracker*.</li>
+                </ul></p>
+                <p><strong>Modern Ballet:</strong> Modern ballet incorporates elements from various dance genres, reflecting changes in artistic expression and performance techniques.</p>
+                <p><strong>Sources:</strong> Greskovic, R. (2005). *Ballet 101: A Complete Guide to Learning and Loving the Ballet*. St. Martin's Press. Carter, A. (2014). *Ballet and Modern Dance: A Guide to the History, Technique, and Appreciation*. Oxford University Press.</p>
+
+                <h3>38. Baroque Art</h3>
+                <p><strong>Overview:</strong> Baroque art is a style that emerged in the late 16th century in Italy and is characterized by dramatic use of light, intense emotions, and grandeur.</p>
+                <p><strong>Key Characteristics:</strong>
+                <ul>
+                    <li><strong>Dramatic Lighting:</strong> Use of chiaroscuro to create depth and focus.</li>
+                    <li><strong>Emotional Intensity:</strong> Emphasis on movement, tension, and expression.</li>
+                </ul></p>
+                <p><strong>Notable Artists:</strong>
+                <ul>
+                    <li><strong>Caravaggio:</strong> Known for his naturalistic approach and dramatic use of light.</li>
+                    <li><strong>Rembrandt:</strong> Renowned for his masterful handling of light and shadow in portraiture.</li>
+                </ul></p>
+                <p><strong>Sources:</strong> Burke, P. (1999). *The European Renaissance: Centres and Peripheries*. Blackwell Publishing. Greenberg, C. (1960). *Art and Culture: Critical Essays*. Beacon Press.</p>
+
+                <h3>39. Baseball</h3>
+                <p><strong>Overview:</strong> Baseball is a bat-and-ball game played between two teams of nine players each, widely considered America's pastime.</p>
+                <p><strong>Historical Development:</strong>
+                <ul>
+                    <li><strong>Origins:</strong> Baseball's origins are debated, with roots traced to bat-and-ball games in Britain and early American adaptations.</li>
+                    <li><strong>Major League Baseball (MLB):</strong> Established in 1869, MLB became the premier professional baseball league.</li>
+                </ul></p>
+                <p><strong>Cultural Impact:</strong> Baseball has influenced American culture and sports, serving as a symbol of American identity and a platform for social change.</p>
+                <p><strong>Sources:</strong> Spink, B. (2007). *The National Pastime: A Review of Baseball History*. Baseball Digest. Klein, A. M. (2006). *Baseball on the Border: A Tale of Two Laredos*. Princeton University Press.</p>
+
+                <h3>40. Biodiversity</h3>
+                <p><strong>Overview:</strong> Biodiversity refers to the variety of life forms on Earth, including genetic, species, and ecosystem diversity.</p>
+                <p><strong>Importance:</strong>
+                <ul>
+                    <li><strong>Ecological Health:</strong> Biodiversity is crucial for ecosystem stability, resilience, and the provision of ecosystem services.</li>
+                    <li><strong>Conservation:</strong> Efforts to preserve biodiversity are essential to prevent species extinction and maintain ecosystem functions.</li>
+                </ul></p>
+                <p><strong>Threats:</strong> Human activities, such as habitat destruction, climate change, and pollution, pose significant threats to global biodiversity.</p>
+                <p><strong>Sources:</strong> Sala, O. E., et al. (2000). *Global biodiversity scenarios for the year 2100*. Science. Wilson, E. O. (1992). *The Diversity of Life*. Harvard University Press.</p>
+
+                <h3>41. Biochemistry</h3>
+                <p><strong>Overview:</strong> Biochemistry is the branch of science that explores the chemical processes within and related to living organisms.</p>
+                <p><strong>Key Areas:</strong>
+                <ul>
+                    <li><strong>Metabolism:</strong> Study of biochemical reactions and pathways that sustain life.</li>
+                    <li><strong>Genetics:</strong> Understanding of genetic information and its expression through biochemical processes.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Biochemistry has applications in medicine, agriculture, and environmental science, contributing to advancements in health, nutrition, and biotechnology.</p>
+                <p><strong>Sources:</strong> Berg, J. M., Tymoczko, J. L., & Gatto, G. J. (2015). *Biochemistry*. W.H. Freeman and Company. Alberts, B., et al. (2002). *Molecular Biology of the Cell*. Garland Science.</p>
+
+                <h3>42. Bird Migration</h3>
+                <p><strong>Overview:</strong> Bird migration refers to the regular seasonal movement of birds between breeding and wintering grounds.</p>
+                <p><strong>Patterns and Mechanisms:</strong>
+                <ul>
+                    <li><strong>Types:</strong> Migration can be partial or complete, with some species traveling long distances and others moving short distances.</li>
+                    <li><strong>Navigation:</strong> Birds use various cues, including the sun, stars, and Earth's magnetic field, to navigate during migration.</li>
+                </ul></p>
+                <p><strong>Conservation:</strong> Migration patterns are affected by environmental changes, making the conservation of migratory routes and habitats crucial for bird species.</p>
+                <p><strong>Sources:</strong> Berthold, P. (2001). *Bird Migration: A General Survey*. Oxford University Press. Alerstam, T. (1990). *Bird Migration*. Cambridge University Press.</p>
+
+                <h3>43. Black Death</h3>
+                <p><strong>Overview:</strong> The Black Death was a devastating pandemic that swept through Europe in the 14th century, caused by the bacterium *Yersinia pestis*.</p>
+                <p><strong>Impact:</strong>
+                <ul>
+                    <li><strong>Population Decline:</strong> The Black Death resulted in the deaths of an estimated 25-30 million people, significantly affecting European societies.</li>
+                    <li><strong>Social and Economic Effects:</strong> The pandemic led to economic upheaval, labor shortages, and social changes, including shifts in the feudal system.</li>
+                </ul></p>
+                <p><strong>Historical Sources:</strong> Boccaccio, G. (1353). *The Decameron*. Penguin Classics. Hays, J. N. (2005). *The Burdens of Disease: Epidemics and Human Response in Western History*. Rutgers University Press.</p>
+
+                <h3>44. Body Language</h3>
+                <p><strong>Overview:</strong> Body language refers to nonverbal communication through physical gestures, postures, and facial expressions.</p>
+                <p><strong>Types of Body Language:</strong>
+                <ul>
+                    <li><strong>Facial Expressions:</strong> Convey emotions such as happiness, sadness, or anger.</li>
+                    <li><strong>Gestures:</strong> Hand movements and other gestures can indicate agreement, emphasis, or other meanings.</li>
+                </ul></p>
+                <p><strong>Significance:</strong> Understanding body language is crucial for effective communication, relationship-building, and interpreting social interactions.</p>
+                <p><strong>Sources:</strong> Pease, A., & Pease, B. (2004). *The Definitive Book of Body Language*. Bantam. Mehrabian, A. (1972). *Nonverbal Communication*. Aldine Publishing.</p>
+
+                <h3>45. Botany</h3>
+                <p><strong>Overview:</strong> Botany is the scientific study of plants, including their physiology, structure, genetics, and ecology.</p>
+                <p><strong>Key Areas:</strong>
+                <ul>
+                    <li><strong>Plant Anatomy:</strong> Study of plant structures and functions.</li>
+                    <li><strong>Plant Ecology:</strong> Examination of plant interactions with their environment and other organisms.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Botany is essential for agriculture, horticulture, environmental conservation, and understanding ecological systems.</p>
+                <p><strong>Sources:</strong> Raven, P. H., Evert, R. F., & Eichhorn, S. E. (2012). *Biology of Plants*. W.H. Freeman and Company. Morris, R. K. A. (1995). *Plant Biology: The Biology of Plants*. Cambridge University Press.</p>
+
+                <h3>46. Buddhism</h3>
+                <p><strong>Overview:</strong> Buddhism is a spiritual and philosophical tradition founded by Siddhartha Gautama, known as the Buddha, in the 5th century BCE in India.</p>
+                <p><strong>Core Teachings:</strong>
+                <ul>
+                    <li><strong>The Four Noble Truths:</strong> Central principles addressing the nature of suffering and the path to enlightenment.</li>
+                    <li><strong>The Eightfold Path:</strong> A guide for ethical and mental development to achieve nirvana.</li>
+                </ul></p>
+                <p><strong>Branches:</strong>
+                <ul>
+                    <li><strong>Theravada:</strong> Emphasizes monastic life and the earliest teachings of the Buddha.</li>
+                    <li><strong>Mahayana:</strong> Includes a range of practices and beliefs, focusing on compassion and the Bodhisattva ideal.</li>
+                    <li><strong>Vajrayana:</strong> Incorporates esoteric practices and rituals, prominent in Tibetan Buddhism.</li>
+                </ul></p>
+                <p><strong>Sources:</strong> Rahula, W. (1974). *What the Buddha Taught*. Grove Press. Lopez, D. S. (1995). *The Story of Buddhism: A Concise Guide to its History & Teachings*. HarperOne.</p>
+
+                <h3>47. Byzantine Empire</h3>
+                <p><strong>Overview:</strong> The Byzantine Empire was the eastern continuation of the Roman Empire, lasting from the fall of the Western Roman Empire in AD 476 until the fall of Constantinople in 1453.</p>
+                <p><strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Capital:</strong> Constantinople (modern-day Istanbul), a major center of trade, culture, and political power.</li>
+                    <li><strong>Religion:</strong> The Byzantine Empire was a bastion of Eastern Orthodox Christianity.</li>
+                </ul></p>
+                <p><strong>Historical Legacy:</strong> The Byzantine Empire preserved and transmitted classical knowledge, influenced the development of Christian theology, and impacted European and Middle Eastern history.</p>
+                <p><strong>Sources:</strong> Horsley, L. (2007). *The Byzantine World*. Routledge. Brown, P. (1989). *The Rise of Western Christendom: Triumph and Diversity, A.D. 200-1000*. Blackwell Publishing.</p>
+
+                <h3>48. C++ Programming</h3>
+                <p><strong>Overview:</strong> C++ is a high-level programming language known for its efficiency, performance, and versatility, used in systems and application software development.</p>
+                <p><strong>Features:</strong>
+                <ul>
+                    <li><strong>Object-Oriented Programming:</strong> Supports classes and objects, enabling code reuse and modular design.</li>
+                    <li><strong>Standard Template Library (STL):</strong> Provides a collection of generic classes and functions for data structures and algorithms.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> C++ is used in various domains, including system/software development, game programming, and high-performance applications.</p>
+                <p><strong>Sources:</strong> Stroustrup, B. (2013). *The C++ Programming Language*. Addison-Wesley. Sutter, H., & Alexandrescu, A. (2004). *C++ Coding Standards: 101 Rules, Guidelines, and Best Practices*. Addison-Wesley.</p>
+
+                <h3>49. C# Programming</h3>
+                <p><strong>Overview:</strong> C# (pronounced "C-sharp") is a modern, object-oriented programming language developed by Microsoft, part of the .NET framework.</p>
+                <p><strong>Features:</strong>
+                <ul>
+                    <li><strong>Object-Oriented:</strong> Supports encapsulation, inheritance, and polymorphism.</li>
+                    <li><strong>Integrated Development Environment:</strong> Often used with Microsoft Visual Studio for developing Windows applications.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> C# is widely used in enterprise applications, web development, and game development, particularly with the Unity game engine.</p>
+                <p><strong>Sources:</strong> Troelsen, A. (2017). *Pro C# 7: With .NET and .NET Core*. Apress. Albahari, J., & Albahari, B. (2019). *C# 8.0 in a Nutshell*. O'Reilly Media.</p>
+
+                <h3>50. Calculus</h3>
+                <p><strong>Overview:</strong> Calculus is a branch of mathematics that studies continuous change through the concepts of differentiation and integration.</p>
+                <p><strong>Key Concepts:</strong>
+                <ul>
+                    <li><strong>Differentiation:</strong> The process of finding the rate at which a function changes.</li>
+                    <li><strong>Integration:</strong> The process of finding the total accumulation of quantities, such as areas under curves.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Calculus is essential in various fields, including physics, engineering, economics, and computer science, providing tools for modeling and solving complex problems.</p>
+                <p><strong>Sources:</strong> Stewart, J. (2015). *Calculus: Early Transcendentals*. Cengage Learning. Spivak, M. (1994). *Calculus*. Publish or Perish.</p>
+
+                <h3>51. Capitalism</h3>
+                <p><strong>Overview:</strong> Capitalism is an economic system characterized by private ownership of the means of production, free markets, and competition.</p>
+                <p><strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Private Property:</strong> Individuals and businesses own and control property and resources.</li>
+                    <li><strong>Market Economy:</strong> Prices and production levels are determined by supply and demand in free markets.</li>
+                </ul></p>
+                <p><strong>Criticisms and Variations:</strong>
+                <ul>
+                    <li><strong>Criticisms:</strong> Issues such as income inequality and economic instability are often associated with capitalism.</li>
+                    <li><strong>Variations:</strong> Different forms of capitalism exist, including laissez-faire and regulated capitalism.</li>
+                </ul></p>
+                <p><strong>Sources:</strong> Smith, A. (1776). *The Wealth of Nations*. Penguin Classics. Marx, K. (1867). *Das Kapital*. Progress Publishers.</p>
+
+                <h3>52. Cardiology</h3>
+                <p><strong>Overview:</strong> Cardiology is the branch of medicine that deals with disorders of the heart and blood vessels.</p>
+                <p><strong>Key Areas:</strong>
+                <ul>
+                    <li><strong>Heart Diseases:</strong> Includes conditions such as coronary artery disease, heart failure, and arrhythmias.</li>
+                    <li><strong>Diagnostic Techniques:</strong> Utilizes methods like ECG, echocardiography, and cardiac catheterization to diagnose and treat heart conditions.</li>
+                </ul></p>
+                <p><strong>Advancements:</strong> Recent advancements in cardiology include minimally invasive procedures, improved imaging techniques, and novel therapeutic approaches.</p>
+                <p><strong>Sources:</strong> Braunwald, E. (2015). *Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine*. Elsevier. Bonow, R. O., et al. (2011). *Hurst's the Heart*. McGraw-Hill.</p>
+
+                <h3>53. Carpal Tunnel Syndrome</h3>
+                <p><strong>Overview:</strong> Carpal Tunnel Syndrome (CTS) is a condition caused by pressure on the median nerve as it passes through the carpal tunnel in the wrist.</p>
+                <p><strong>Symptoms:</strong>
+                <ul>
+                    <li><strong>Numbness and Tingling:</strong> Often experienced in the thumb, index, and middle fingers.</li>
+                    <li><strong>Pain:</strong> Can radiate up the arm and interfere with hand function.</li>
+                </ul></p>
+                <p><strong>Treatment and Prevention:</strong>
+                <ul>
+                    <li><strong>Non-Surgical:</strong> Includes wrist splinting, anti-inflammatory medications, and physical therapy.</li>
+                    <li><strong>Surgical:</strong> In severe cases, surgery to relieve pressure on the median nerve may be necessary.</li>
+                </ul></p>
+                <p><strong>Sources:</strong> Gelberman, R. H., et al. (1998). *Carpal Tunnel Syndrome*. Springer. Weisman, J. M. (1993). *Carpal Tunnel Syndrome: Diagnosis and Management*. Churchill Livingstone.</p>
+
+                <h3>54. Cell Biology</h3>
+                <p><strong>Overview:</strong> Cell biology is the study of cells, their physiological properties, their structure, the organelles they contain, interactions with their environment, their division, and their death.</p>
+                <p><strong>Key Concepts:</strong>
+                <ul>
+                    <li><strong>Cell Structure:</strong> Understanding of cell components such as the nucleus, mitochondria, and cell membrane.</li>
+                    <li><strong>Cell Function:</strong> Study of processes like metabolism, signal transduction, and cell division.</li>
+                </ul></p>
+                <p><strong>Applications:</strong> Cell biology is crucial for understanding diseases, developing medical treatments, and advancing biotechnology.</p>
+                <p><strong>Sources:</strong> Alberts, B., et al. (2002). *Molecular Biology of the Cell*. Garland Science. Lodish, H., et al. (2000). *Molecular Cell Biology*. W.H. Freeman and Company.</p>
+            <ul> 
+                <h2 id="55">55. Chemical Engineering</h2>
+<p><strong>Overview</strong><br>Chemical engineering is the branch of engineering that deals with the design, optimization, and operation of chemical processes.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Process Design:</strong> Developing processes for the large-scale production of chemicals and materials.<br>
+- <strong>Reaction Engineering:</strong> Study of chemical reactions and their optimization for industrial applications.</p>
+<p><strong>Applications</strong><br>Chemical engineering is essential in industries such as pharmaceuticals, petrochemicals, and environmental technology.</p>
+<p><strong>Sources</strong><br>
+- Felder, R. M., & Rousseau, R. W. (2005). <em>Elementary Principles of Chemical Processes</em>. Wiley.<br>
+- Levenspiel, O. (1999). <em>Chemical Reaction Engineering</em>. Wiley.</p>
+
+<h2 id="56">56. Chemistry</h2>
+<p><strong>Overview</strong><br>Chemistry is the scientific study of matter, its properties, composition, and the changes it undergoes during chemical reactions.</p>
+<p><strong>Branches</strong><br>
+- <strong>Organic Chemistry:</strong> Focuses on carbon-containing compounds and their reactions.<br>
+- <strong>Inorganic Chemistry:</strong> Studies non-organic compounds and materials.<br>
+- <strong>Physical Chemistry:</strong> Examines the physical principles underlying chemical phenomena.</p>
+<p><strong>Applications</strong><br>Chemistry plays a crucial role in various fields, including medicine, environmental science, and materials science.</p>
+<p><strong>Sources</strong><br>
+- Chang, R., & Goldsby, K. A. (2015). <em>Chemistry</em>. McGraw-Hill.<br>
+- Atkins, P., & de Paula, J. (2006). <em>Physical Chemistry</em>. Oxford University Press.</p>
+
+<h2 id="57">57. Classical Mechanics</h2>
+<p><strong>Overview</strong><br>Classical mechanics is the branch of physics that deals with the motion of objects and the forces acting upon them, based on principles formulated by Newton.</p>
+<p><strong>Key Principles</strong><br>
+- <strong>Newton’s Laws:</strong> Fundamental laws describing the relationship between motion and force.<br>
+- <strong>Conservation Laws:</strong> Principles such as conservation of energy and momentum.</p>
+<p><strong>Applications</strong><br>Classical mechanics is foundational in fields such as engineering, astronomy, and physical sciences, providing the basis for understanding complex systems.</p>
+<p><strong>Sources</strong><br>
+- Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentals of Physics</em>. Wiley.<br>
+- Goldstein, H., Poole, C., & Safko, J. (2002). <em>Classical Mechanics</em>. Addison-Wesley.</p>
+
+<h2 id="58">58. Climate Change</h2>
+<p><strong>Overview</strong><br>Climate change refers to long-term changes in temperature, precipitation, and other atmospheric conditions on Earth, primarily driven by human activities.</p>
+<p><strong>Causes</strong><br>
+- <strong>Greenhouse Gases:</strong> Increased concentrations of carbon dioxide, methane, and other gases trap heat in the atmosphere.<br>
+- <strong>Deforestation:</strong> Loss of forests reduces the planet's ability to absorb carbon dioxide.</p>
+<p><strong>Impact</strong><br>Climate change leads to rising sea levels, more frequent extreme weather events, and shifts in ecosystems and biodiversity.</p>
+<p><strong>Sources</strong><br>
+- IPCC (2021). <em>Climate Change 2021: The Physical Science Basis</em>. Cambridge University Press.<br>
+- Hansen, J., et al. (2012). <em>Climate Sensitivity and Climate Change</em>. Proceedings of the National Academy of Sciences.</p>
+
+<h2 id="59">59. Cloud Computing</h2>
+<p><strong>Overview</strong><br>Cloud computing refers to the delivery of computing services, including servers, storage, databases, and software, over the internet.</p>
+<p><strong>Key Services</strong><br>
+- <strong>Infrastructure as a Service (IaaS):</strong> Provides virtualized computing resources over the internet.<br>
+- <strong>Platform as a Service (PaaS):</strong> Offers a platform allowing customers to develop, run, and manage applications without dealing with infrastructure.<br>
+- <strong>Software as a Service (SaaS):</strong> Delivers software applications over the internet.</p>
+<p><strong>Benefits</strong><br>Cloud computing offers scalability, flexibility, and cost-efficiency for businesses and individuals.</p>
+<p><strong>Sources</strong><br>
+- Mell, P., & Grance, T. (2011). <em>The NIST Definition of Cloud Computing</em>. National Institute of Standards and Technology.<br>
+- Buyya, R., Broberg, J., & Goscinski, A. (2010). <em>Cloud Computing: Principles and Paradigms</em>. Wiley.</p>
+
+<h2 id="60">60. Cognitive Psychology</h2>
+<p><strong>Overview</strong><br>Cognitive psychology is the study of mental processes such as perception, memory, and problem-solving.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Perception:</strong> How sensory information is interpreted and understood.<br>
+- <strong>Memory:</strong> Examination of how information is encoded, stored, and retrieved.<br>
+- <strong>Problem-Solving:</strong> Analysis of cognitive strategies used to solve complex problems.</p>
+<p><strong>Applications</strong><br>Cognitive psychology contributes to understanding human behavior, improving educational methods, and developing interventions for cognitive disorders.</p>
+<p><strong>Sources</strong><br>
+- Neisser, U. (1967). <em>Cognitive Psychology</em>. Appleton-Century-Crofts.<br>
+- Eysenck, M. W., & Keane, M. T. (2015). <em>Cognitive Psychology: A Student's Handbook</em>. Psychology Press.</p>
+
+<h2 id="61">61. Communication Theory</h2>
+<p><strong>Overview</strong><br>Communication theory explores how information is transmitted, received, and understood between individuals or groups.</p>
+<p><strong>Key Models</strong><br>
+- <strong>Shannon-Weaver Model:</strong> Describes communication as a linear process involving a sender, message, and receiver.<br>
+- <strong>Berlo's SMCR Model:</strong> Focuses on the source, message, channel, and receiver in the communication process.</p>
+<p><strong>Applications</strong><br>Communication theory is applied in fields such as media studies, marketing, and interpersonal communication to enhance message effectiveness and understanding.</p>
+<p><strong>Sources</strong><br>
+- Shannon, C. E., & Weaver, W. (1949). <em>The Mathematical Theory of Communication</em>. University of Illinois Press.<br>
+- Barnlund, D. C. (2008). <em>A Transactional Model of Communication</em>. In <em>Communication Theory</em>.</p>
+
+<h2 id="62">62. Comparative Politics</h2>
+<p><strong>Overview</strong><br>Comparative politics is the study and comparison of political systems, institutions, and behaviors across different countries.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Political Systems:</strong> Examination of different forms of government and political structures.<br>
+- <strong>Political Behavior:</strong> Analysis of voting patterns, public opinion, and political participation.</p>
+<p><strong>Methods</strong><br>Comparative politics employs qualitative and quantitative methods to identify patterns and test theories about political phenomena.</p>
+<p><strong>Sources</strong><br>
+- Sartori, G. (1970). <em>Comparative Constitutional Engineering: An Inquiry into Structures, Incentives, and Outcomes</em>. Macmillan.<br>
+- Lijphart, A. (2012). <em>Patterns of Democracy: Government Forms and Performance in Thirty-Six Countries</em>. Yale University Press.</p>
+
+<h2 id="63">63. Computational Biology</h2>
+<p><strong>Overview</strong><br>Computational biology involves the use of algorithms, models, and computational techniques to understand biological systems and processes.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Bioinformatics:</strong> Analysis of biological data, such as genetic sequences, using computational tools.<br>
+- <strong>Systems Biology:</strong> Study of complex interactions within biological systems using computational models.</p>
+<p><strong>Applications</strong><br>Computational biology is used in drug discovery, genomics, and the study of complex diseases.</p>
+<p><strong>Sources</strong><br>
+- Berger, B., & Kim, P. S. (2013). <em>Computational Biology: A Practical Guide for the Analysis of Genes and Proteins</em>. Wiley.<br>
+- Alon, U. (2007). <em>Network Analysis of Molecular Systems</em>. Nature Publishing Group.</p>
+
+<h2 id="64">64. Constitutional Law</h2>
+<p><strong>Overview</strong><br>Constitutional law deals with the interpretation and application of a country's constitution, defining the powers and rights of government and citizens.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Judicial Review:</strong> The power of courts to examine and invalidate government actions that violate the constitution.<br>
+- <strong>Rights and Freedoms:</strong> Protection of fundamental rights such as freedom of speech, religion, and due process.</p>
+<p><strong>Applications</strong><br>Constitutional law shapes the legal framework for governance, human rights, and the balance of power within a state.</p>
+<p><strong>Sources</strong><br>
+- Ackerman, B. (1991). <em>We the People: Foundations</em>. Harvard University Press.<br>
+- Tribe, L. H. (1988). <em>American Constitutional Law</em>. Foundation Press.</p>
+
+<h2 id="65">65. Consumer Behavior</h2>
+<p><strong>Overview</strong><br>Consumer behavior examines the processes and factors influencing how individuals make purchasing decisions and use products.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Decision-Making:</strong> Analysis of how consumers evaluate options and make choices.<br>
+- <strong>Influences:</strong> Study of factors such as cultural, social, and psychological influences on consumer behavior.</p>
+<p><strong>Applications</strong><br>Understanding consumer behavior helps businesses develop marketing strategies, product designs, and customer service approaches.</p>
+<p><strong>Sources</strong><br>
+- Kotler, P., & Keller, K. L. (2016). <em>Marketing Management</em>. Pearson.<br>
+- Solomon, M. R. (2018). <em>Consumer Behavior: Buying, Having, and Being</em>. Pearson.</p>
+
+<h2 id="66">66. Cosmology</h2>
+<p><strong>Overview</strong><br>Cosmology is the scientific study of the origin, evolution, and eventual fate of the universe.</p>
+<p><strong>Key Concepts</strong><br>
+- <strong>Big Bang Theory:</strong> The leading explanation for the universe's origin, describing its expansion from a hot, dense state.<br>
+- <strong>Dark Matter and Dark Energy:</strong> Mysterious components thought to make up most of the universe's mass-energy content.</p>
+<p><strong>Applications</strong><br>Cosmology helps us understand the large-scale structure of the universe and its fundamental properties.</p>
+<p><strong>Sources</strong><br>
+- Hawking, S., & Mlodinow, L. (2005). <em>The Grand Design</em>. Bantam Books.<br>
+- Weinberg, S. (2008). <em>Cosmology</em>. Oxford University Press.</p>
+
+<h2 id="67">67. Creative Writing</h2>
+<p><strong>Overview</strong><br>Creative writing encompasses various forms of written expression that prioritize artistic expression, imagination, and storytelling.</p>
+<p><strong>Genres</strong><br>
+- <strong>Fiction:</strong> Includes novels, short stories, and novellas.<br>
+- <strong>Poetry:</strong> Emphasizes rhythm, imagery, and emotional expression.<br>
+- <strong>Creative Nonfiction:</strong> Combines factual content with literary techniques for storytelling.</p>
+<p><strong>Techniques</strong><br>Creative writing involves elements such as plot development, character creation, and thematic exploration.</p>
+<p><strong>Sources</strong><br>
+- Gardner, J. (1991). <em>The Art of Fiction</em>. Vintage Books.<br>
+- Lamott, A. (1994). <em>Bird by Bird: Some Instructions on Writing and Life</em>. Pantheon Books.</p>
+
+<h2 id="68">68. Cryptography</h2>
+<p><strong>Overview</strong><br>Cryptography is the practice of securing communication and data through encoding techniques.</p>
+<p><strong>Key Concepts</strong><br>
+- <strong>Encryption:</strong> The process of converting information into a coded format to prevent unauthorized access.<br>
+- <strong>Decryption:</strong> The process of converting encoded information back into its original format.</p>
+<p><strong>Applications</strong><br>Cryptography is essential for securing online communications, protecting sensitive data, and ensuring privacy.</p>
+<p><strong>Sources</strong><br>
+- Schneier, B. (2015). <em>Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World</em>. W.W. Norton & Company.<br>
+- Katz, J., & Lindell, Y. (2007). <em>Introduction to Modern Cryptography: Principles and Protocols</em>. Springer.</p>
+
+<h2 id="69">69. Cultural Anthropology</h2>
+<p><strong>Overview</strong><br>Cultural anthropology is the study of human societies, cultures, and their development.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Ethnography:</strong> The detailed observation and description of a particular culture or society.<br>
+- <strong>Cultural Practices:</strong> Examination of rituals, beliefs, and social norms within different cultures.</p>
+<p><strong>Applications</strong><br>Cultural anthropology provides insights into human diversity, social practices, and the impact of cultural changes.</p>
+<p><strong>Sources</strong><br>
+- Geertz, C. (1973). <em>The Interpretation of Cultures</em>. Basic Books.<br>
+- Kottak, C. P. (2016). <em>Cultural Anthropology: Appreciating Cultural Diversity</em>. McGraw-Hill.</p>
+
+<h2 id="70">70. Data Science</h2>
+<p><strong>Overview</strong><br>Data science involves extracting insights and knowledge from large and complex data sets using statistical, computational, and analytical methods.</p>
+<p><strong>Key Techniques</strong><br>
+- <strong>Data Mining:</strong> Discovering patterns and relationships in large data sets.<br>
+- <strong>Machine Learning:</strong> Developing algorithms that improve through experience and data.</p>
+<p><strong>Applications</strong><br>Data science is used in various fields, including business analytics, healthcare, and social sciences, to make data-driven decisions and predictions.</p>
+<p><strong>Sources</strong><br>
+- Provost, F., & Fawcett, T. (2013). <em>Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking</em>. O'Reilly Media.<br>
+- McKinsey & Company. (2022). <em>The Age of Analytics: Competing in a Data-Driven World</em>. McKinsey & Company.</p>
+
+<h2 id="71">71. Development Economics</h2>
+<p><strong>Overview</strong><br>Development economics focuses on improving economic conditions and living standards in developing countries.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Poverty Alleviation:</strong> Strategies and policies aimed at reducing poverty.<br>
+- <strong>Economic Growth:</strong> Analysis of factors contributing to economic development and growth.</p>
+<p><strong>Applications</strong><br>Development economics informs policy decisions, aid programs, and initiatives aimed at fostering sustainable development.</p>
+<p><strong>Sources</strong><br>
+- Sen, A. (1999). <em>Development as Freedom</em>. Alfred A. Knopf.<br>
+- Todaro, M. P., & Smith, S. C. (2011). <em>Economic Development</em>. Pearson.</p>
+
+<h2 id="72">72. Differential Equations</h2>
+<p><strong>Overview</strong><br>Differential equations are mathematical equations that involve derivatives and describe how a quantity changes in relation to another.</p>
+<p><strong>Key Concepts</strong><br>
+- <strong>Ordinary Differential Equations (ODEs):</strong> Involve functions of a single variable and their derivatives.<br>
+- <strong>Partial Differential Equations (PDEs):</strong> Involve functions of multiple variables and their partial derivatives.</p>
+<p><strong>Applications</strong><br>Differential equations are used in various fields, including physics, engineering, and economics, to model dynamic systems and processes.</p>
+<p><strong>Sources</strong><br>
+- Boyce, W. E., & DiPrima, R. C. (2012). <em>Elementary Differential Equations and Boundary Value Problems</em>. Wiley.<br>
+- Coddington, E. A., & Levinson, N. (1955). <em>Theory of Ordinary Differential Equations</em>. McGraw-Hill.</p>
+
+<h2 id="73">73. Economic History</h2>
+<p><strong>Overview</strong><br>Economic history examines the development of economic systems, institutions, and practices over time.</p>
+<p><strong>Key Areas</strong><br>
+- <strong>Historical Economic Systems:</strong> Analysis of different economic systems, such as feudalism and capitalism.<br>
+- <strong>Economic Crises:</strong> Study of major economic downturns and their causes.</p>
+<p><strong>Applications</strong><br>Economic history provides insights into how past economic practices and events shape current economic policies
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topics Overview</title>
+</head>
+<body>
+
+    <h2 id="79">79. Ethics</h2>
+    <p><strong>Overview</strong><br>Ethics is the philosophical study of moral principles that govern behavior and decision-making.</p>
+    <p><strong>Key Theories</strong><br>
+        - <strong>Utilitarianism:</strong> Advocates for actions that maximize overall happiness or utility.<br>
+        - <strong>Deontology:</strong> Focuses on adherence to moral duties and rules, regardless of outcomes.
+    </p>
+    <p><strong>Applications</strong><br>Ethics guides personal conduct, professional practices, and policy-making, addressing issues such as justice, rights, and responsibility.</p>
+    <p><strong>Sources</strong><br>
+        - Mill, J. S. (1863). <em>Utilitarianism</em>. Parker, Son, and Bourn.<br>
+        - Kant, I. (1785). <em>Groundwork of the Metaphysics of Morals</em>. Cambridge University Press.
+    </p>
+
+    <h2 id="80">80. Evolutionary Biology</h2>
+    <p><strong>Overview</strong><br>Evolutionary biology studies the origins, development, and diversification of life on Earth through the process of evolution.</p>
+    <p><strong>Key Concepts</strong><br>
+        - <strong>Natural Selection:</strong> The process by which advantageous traits become more common in a population.<br>
+        - <strong>Genetic Drift:</strong> Random changes in allele frequencies in a population.
+    </p>
+    <p><strong>Applications</strong><br>Evolutionary biology helps explain the diversity of life, evolutionary relationships, and the adaptation of organisms to their environments.</p>
+    <p><strong>Sources</strong><br>
+        - Darwin, C. (1859). <em>On the Origin of Species</em>. John Murray.<br>
+        - Futuyma, D. J. (2017). <em>Evolutionary Biology</em>. Sinauer Associates.
+    </p>
+
+    <h2 id="81">81. Finance</h2>
+    <p><strong>Overview</strong><br>Finance is the management of money, investments, and other financial instruments.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Corporate Finance:</strong> Focuses on financial management and strategies within companies.<br>
+        - <strong>Investment:</strong> Involves the analysis and selection of investment opportunities.
+    </p>
+    <p><strong>Applications</strong><br>Finance is essential for personal financial planning, corporate financial management, and investment strategies.</p>
+    <p><strong>Sources</strong><br>
+        - Brealey, R. A., Myers, S. C., & Allen, F. (2017). <em>Principles of Corporate Finance</em>. McGraw-Hill.<br>
+        - Merton, R. C., & Bodie, Z. (1995). <em>A Conceptual Framework for Analyzing the Financial Environment</em>. In <em>The Theory and Practice of Investment Management</em>.
+    </p>
+
+    <h2 id="82">82. Game Theory</h2>
+    <p><strong>Overview</strong><br>Game theory is the study of mathematical models of strategic interaction among rational decision-makers.</p>
+    <p><strong>Key Concepts</strong><br>
+        - <strong>Nash Equilibrium:</strong> A situation in which no player can benefit by changing their strategy while others keep theirs unchanged.<br>
+        - <strong>Zero-Sum Games:</strong> Scenarios where one player's gain is equivalent to another player's loss.
+    </p>
+    <p><strong>Applications</strong><br>Game theory is applied in economics, political science, and evolutionary biology to analyze competitive and cooperative interactions.</p>
+    <p><strong>Sources</strong><br>
+        - Nash, J. F. (1950). <em>Equilibrium Points in N-Person Games</em>. Proceedings of the National Academy of Sciences.<br>
+        - Osbourne, M. J., & Rubinstein, A. (1994). <em>A Course in Game Theory</em>. MIT Press.
+    </p>
+
+    <h2 id="83">83. Geopolitics</h2>
+    <p><strong>Overview</strong><br>Geopolitics examines the influence of geographic factors on international politics and power relations.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Strategic Geography:</strong> Analysis of how geographic locations impact strategic interests and conflicts.<br>
+        - <strong>Resource Distribution:</strong> Study of how access to resources affects global power dynamics.
+    </p>
+    <p><strong>Applications</strong><br>Geopolitics informs foreign policy, international relations, and strategic planning by considering geographic and resource-related factors.</p>
+    <p><strong>Sources</strong><br>
+        - Mearsheimer, J. J. (2001). <em>The Tragedy of Great Power Politics</em>. Free Press.<br>
+        - Kaplan, R. D. (2009). <em>The Revenge of Geography: What the Map Tells Us About Coming Conflicts and the Battle Against Fate</em>. Random House.
+    </p>
+
+    <h2 id="84">84. Geology</h2>
+    <p><strong>Overview</strong><br>Geology is the scientific study of the Earth, including its materials, structures, and processes.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Mineralogy:</strong> Study of minerals and their properties.<br>
+        - <strong>Paleontology:</strong> Examination of fossils to understand past life forms and environments.
+    </p>
+    <p><strong>Applications</strong><br>Geology is crucial for natural resource exploration, understanding natural hazards, and studying Earth's history.</p>
+    <p><strong>Sources</strong><br>
+        - Marshak, S. (2012). <em>Earth: Portrait of a Planet</em>. W.W. Norton & Company.<br>
+        - Press, F., & Siever, R. (2001). <em>Understanding Earth</em>. W.H. Freeman and Company.
+    </p>
+
+    <h2 id="85">85. Health Economics</h2>
+    <p><strong>Overview</strong><br>Health economics studies the efficiency and effectiveness of healthcare systems and the allocation of resources in health care.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Cost-Effectiveness Analysis:</strong> Evaluation of the relative costs and outcomes of different healthcare interventions.<br>
+        - <strong>Health Policy:</strong> Analysis of policies aimed at improving healthcare access, quality, and outcomes.
+    </p>
+    <p><strong>Applications</strong><br>Health economics informs healthcare decision-making, policy development, and resource allocation to improve health outcomes.</p>
+    <p><strong>Sources</strong><br>
+        - Drummond, M. F., Sculpher, M. J., Claxton, K., et al. (2015). <em>Methods for the Economic Evaluation of Health Care Programmes</em>. Oxford University Press.<br>
+        - Culyer, A. J., & Newhouse, J. P. (2000). <em>Handbook of Health Economics</em>. Elsevier.
+    </p>
+
+    <h2 id="86">86. History of Science</h2>
+    <p><strong>Overview</strong><br>The history of science explores the development of scientific knowledge and practices over time.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Scientific Revolutions:</strong> Examination of major shifts in scientific understanding, such as the Copernican and Newtonian revolutions.<br>
+        - <strong>Scientific Method:</strong> Study of the evolution of methods and approaches used in scientific inquiry.
+    </p>
+    <p><strong>Applications</strong><br>Understanding the history of science provides insights into how scientific knowledge evolves and influences contemporary science and technology.</p>
+    <p><strong>Sources</strong><br>
+        - Kuhn, T. S. (1962). <em>The Structure of Scientific Revolutions</em>. University of Chicago Press.<br>
+        - Jacob, C. (2006). <em>The Scientific Revolution: A Brief History with Documents</em>. Bedford/St. Martin's.
+    </p>
+
+    <h2 id="87">87. Human Resources Management</h2>
+    <p><strong>Overview</strong><br>Human resources management (HRM) focuses on recruiting, managing, and developing an organization's workforce.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Talent Acquisition:</strong> Strategies for recruiting and hiring skilled employees.<br>
+        - <strong>Employee Development:</strong> Programs and initiatives for training and career development.
+    </p>
+   
+    <h2 id="92">92. Mathematical Logic</h2>
+    <p><strong>Overview</strong><br>Mathematical logic studies formal systems and their applications in mathematics and computer science.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Proof Theory:</strong> Examination of formal proofs and their structures.<br>
+        - <strong>Model Theory:</strong> Study of the relationships between formal systems and their interpretations.
+    </p>
+    <p><strong>Applications</strong><br>Mathematical logic underpins the development of algorithms, programming languages, and formal verification methods.</p>
+    <p><strong>Sources</strong><br>
+        - Ebbinghaus, H.-D., Flum, J., & Thomas, W. (1994). <em>Mathematical Logic</em>. Springer.<br>
+        - Enderton, H. B. (2001). <em>A Mathematical Introduction to Logic</em>. Academic Press.
+    </p>
+
+    <h2 id="93">93. Mathematical Statistics</h2>
+    <p><strong>Overview</strong><br>Mathematical statistics involves the application of mathematical methods to the collection, analysis, and interpretation of data.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Probability Theory:</strong> The study of random events and their likelihood.<br>
+        - <strong>Statistical Inference:</strong> Techniques for drawing conclusions about populations based on sample data.
+    </p>
+    <p><strong>Applications</strong><br>Mathematical statistics is used in various fields, including scientific research, economics, and engineering, to make data-driven decisions and predictions.</p>
+    <p><strong>Sources</strong><br>
+        - Casella, G., & Berger, R. L. (2002). <em>Statistical Inference</em>. Duxbury Press.<br>
+        - Lehmann, E. L., & Casella, G. (2006). <em>Theory of Point Estimation</em>. Springer.
+    </p>
+
+    <h2 id="94">94. Metaphysics</h2>
+    <p><strong>Overview</strong><br>Metaphysics is the branch of philosophy concerned with the nature of reality and existence.</p>
+    <p><strong>Key Topics</strong><br>
+        - <strong>Ontology:</strong> Study of the nature of being and existence.<br>
+        - <strong>Identity and Change:</strong> Examination of how objects persist through time and change.
+    </p>
+    <p><strong>Applications</strong><br>Metaphysics explores fundamental questions about reality, identity, and the nature of objects and their properties.</p>
+    <p><strong>Sources</strong><br>
+        - Aristotle. (350 B.C.E.). <em>Metaphysics</em>. (Translated by W. D. Ross).<br>
+        - Kripke, S. A. (1980). <em>Naming and Necessity</em>. Harvard University Press.
+    </p>
+
+    <h2 id="95">95. Neuroscience</h2>
+    <p><strong>Overview</strong><br>Neuroscience is the study of the nervous system and its impact on behavior and cognitive functions.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Neuroanatomy:</strong> Study of the structure of the nervous system.<br>
+        - <strong>Neurophysiology:</strong> Examination of the functions and processes of the nervous system.
+    </p>
+    <p><strong>Applications</strong><br>Neuroscience informs our understanding of brain function, neurological disorders, and cognitive processes.</p>
+    <p><strong>Sources</strong><br>
+        - Bear, M. F., Connors, B. W., & Paradiso, M. A. (2015). <em>Neuroscience: Exploring the Brain</em>. Lippincott Williams & Wilkins.<br>
+        - Kandel, E. R., Schwartz, J. H., & Jessell, T. M. (2012). <em>Principles of Neural Science</em>. McGraw-Hill.
+    </p>
+
+    <h2 id="96">96. Organizational Behavior</h2>
+    <p><strong>Overview</strong><br>Organizational behavior studies how individuals and groups act within organizations and how organizations respond to their environment.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Motivation:</strong> Examination of factors that drive employee performance and satisfaction.<br>
+        - <strong>Leadership:</strong> Study of leadership styles and their impact on organizational effectiveness.
+    </p>
+    <p><strong>Applications</strong><br>Organizational behavior helps improve management practices, enhance employee engagement, and foster a positive organizational culture.</p>
+    <p><strong>Sources</strong><br>
+        - Robbins, S. P., & Judge, T. A. (2019). <em>Organizational Behavior</em>. Pearson.<br>
+        - Hackman, J. R., & Oldham, G. R. (1976). <em>Motivation through Design of Work: Test of a Theory</em>. Organizational Behavior and Human Performance.
+    </p>
+
+    <h2 id="97">97. Philosophy</h2>
+    <p><strong>Overview</strong><br>Philosophy is the study of fundamental questions regarding existence, knowledge, ethics, and reasoning.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Epistemology:</strong> The study of knowledge and belief.<br>
+        - <strong>Ethics:</strong> Examination of moral principles and values.
+    </p>
+    <p><strong>Applications</strong><br>Philosophy provides critical thinking skills, ethical frameworks, and theoretical insights applicable in various fields including law, science, and personal decision-making.</p>
+    <p><strong>Sources</strong><br>
+        - Plato. (c. 380 B.C.E.). <em>The Republic</em>. (Translated by Allan Bloom).<br>
+        - Russell, B. (1912). <em>The Problems of Philosophy</em>. Oxford University Press.
+    </p>
+
+    <h2 id="98">98. Physical Chemistry</h2>
+    <p><strong>Overview</strong><br>Physical chemistry explores the physical principles underlying chemical systems and processes.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Thermodynamics:</strong> Study of energy changes and their effects on chemical reactions.<br>
+        - <strong>Quantum Chemistry:</strong> Examination of how quantum mechanics explains chemical phenomena.
+    </p>
+    <p><strong>Applications</strong><br>Physical chemistry aids in understanding reaction mechanisms, material properties, and the design of new chemical processes.</p>
+    <p><strong>Sources</strong><br>
+        - Atkins, P., & de Paula, J. (2014). <em>Physical Chemistry</em>. W.H. Freeman and Company.<br>
+        - Levine, I. N. (2009). <em>Physical Chemistry: Principles and Applications in Biological Sciences</em>. Pearson.
+    </p>
+
+    <h2 id="99">99. Political Science</h2>
+    <p><strong>Overview</strong><br>Political science is the study of political systems, behavior, and governance.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Comparative Politics:</strong> Analysis of different political systems and their functions.<br>
+        - <strong>International Relations:</strong> Study of interactions between states and international organizations.
+    </p>
+    <p><strong>Applications</strong><br>Political science informs public policy, electoral strategies, and the understanding of political dynamics and institutions.</p>
+    <p><strong>Sources</strong><br>
+        - Dahl, R. A. (1989). <em>Democracy and Its Critics</em>. Yale University Press.<br>
+        - Held, D. (2006). <em>Models of Democracy</em>. Stanford University Press.
+    </p>
+
+    <h2 id="100">100. Psychology</h2>
+    <p><strong>Overview</strong><br>Psychology is the scientific study of behavior and mental processes.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Cognitive Psychology:</strong> Examination of mental processes such as perception, memory, and problem-solving.<br>
+        - <strong>Clinical Psychology:</strong> Study of mental health disorders and therapeutic techniques.
+    </p>
+    <p><strong>Applications</strong><br>Psychology contributes to mental health treatment, understanding human behavior, and improving educational and organizational practices.</p>
+    <p><strong>Sources</strong><br>
+        - Myers, D. G. (2014). <em>Psychology</em>. Worth Publishers.<br>
+        - Durand, V. M., & Barlow, D. H. (2014). <em>Essentials of Abnormal Psychology</em>. Cengage Learning.
+    </p>
+
+    <h2 id="101">101. Quantum Mechanics</h2>
+    <p><strong>Overview</strong><br>Quantum mechanics is a fundamental theory in physics that describes the behavior of particles at the atomic and subatomic levels.</p>
+    <p><strong>Key Concepts</strong><br>
+        - <strong>Wave-Particle Duality:</strong> The concept that particles like electrons exhibit both wave-like and particle-like properties.<br>
+        - <strong>Uncertainty Principle:</strong> Werner Heisenberg's principle that asserts it's impossible to precisely measure both the position and momentum of a particle simultaneously.
+    </p>
+    <p><strong>Applications</strong><br>Quantum mechanics is crucial for understanding atomic structures, developing quantum computing, and advancing technologies like MRI.</p>
+    <p><strong>Sources</strong><br>
+        - Griffiths, D. J. (2017). <em>Introduction to Quantum Mechanics</em>. Cambridge University Press.<br>
+        - Sakurai, J. J., & Napolitano, J. (2020). <em>Modern Quantum Mechanics</em>. Cambridge University Press.
+    </p>
+
+    <h2 id="102">102. Robotics</h2>
+    <p><strong>Overview</strong><br>Robotics is the field of engineering and technology focused on the design, construction, and operation of robots.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Automation:</strong> Use of robots for performing repetitive tasks with precision and efficiency.<br>
+        - <strong>Artificial Intelligence (AI):</strong> Integration of AI to enable robots to perform complex tasks and make decisions.
+    </p>
+    <p><strong>Applications</strong><br>Robotics is used in manufacturing, medical surgery, space exploration, and consumer electronics.</p>
+    <p><strong>Sources</strong><br>
+        - Siciliano, B., & Khatib, O. (2016). <em>Springer Handbook of Robotics</em>. Springer.<br>
+        - Russell, S., & Norvig, P. (2016). <em>Artificial Intelligence: A Modern Approach</em>. Pearson.
+    </p>
+
+    <h2 id="103">103. Space Exploration</h2>
+    <p><strong>Overview</strong><br>Space exploration involves the discovery and exploration of celestial structures through the use of astronomy and space technologies.</p>
+    <p><strong>Key Milestones</strong><br>
+        - <strong>Moon Landing:</strong> The Apollo 11 mission's success in landing the first humans on the Moon in 1969.<br>
+        - <strong>Mars Rovers:</strong> Robotic missions like Curiosity and Perseverance exploring Mars.
+    </p>
+    <p><strong>Applications</strong><br>Space exploration enhances our understanding of the universe, develops new technologies, and seeks to identify potentially habitable planets.</p>
+    <p><strong>Sources</strong><br>
+        - Chaikin, A. (1994). <em>A Man on the Moon: The Voyages of the Apollo Astronauts</em>. Penguin Books.<br>
+        - Musk, E. (2020). <em>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</em>. Ashlee Vance.
+    </p>
+
+    <h2 id="104">104. Statistics</h2>
+    <p><strong>Overview</strong><br>Statistics is the science of collecting, analyzing, interpreting, and presenting data.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Descriptive Statistics:</strong> Methods for summarizing and describing data.<br>
+        - <strong>Inferential Statistics:</strong> Techniques for making predictions or inferences about a population based on a sample.
+    </p>
+    <p><strong>Applications</strong><br>Statistics is used in various fields, including research, business, and social sciences, to make informed decisions based on data analysis.</p>
+    <p><strong>Sources</strong><br>
+        - Moore, D. S., McCabe, G. P., & Craig, B. A. (2017). <em>Introduction to the Practice of Statistics</em>. W.H. Freeman and Company.<br>
+        - Montgomery, D. C., & Runger, G. C. (2010). <em>Applied Statistics and Probability for Engineers</em>. Wiley.
+    </p>
+
+    <h2 id="105">105. Sustainability</h2>
+    <p><strong>Overview</strong><br>Sustainability focuses on meeting the needs of the present without compromising the ability of future generations to meet their own needs.</p>
+    <p><strong>Key Principles</strong><br>
+        - <strong>Environmental Protection:</strong> Practices that aim to conserve natural resources and reduce environmental impact.<br>
+        - <strong>Social Equity:</strong> Ensuring fair treatment and opportunities for all people.
+    </p>
+    <p><strong>Applications</strong><br>Sustainability is applied in various sectors, including energy, agriculture, and urban planning, to promote long-term ecological balance.</p>
+    <p><strong>Sources</strong><br>
+        - Sachs, J. D. (2015). <em>The Age of Sustainable Development</em>. Columbia University Press.<br>
+        - Rockström, J., et al. (2009). <em>A Safe Operating Space for Humanity</em>. Nature.
+    </p>
+
+    <h2 id="106">106. Thermodynamics</h2>
+    <p><strong>Overview</strong><br>Thermodynamics is the branch of physics that deals with the relationships between heat, work, and energy.</p>
+    <p><strong>Key Laws</strong><br>
+        - <strong>First Law:</strong> Energy cannot be created or destroyed, only transferred or transformed.<br>
+        - <strong>Second Law:</strong> The entropy of an isolated system always increases over time.
+    </p>
+    <p><strong>Applications</strong><br>Thermodynamics is essential for designing engines, refrigerators, and understanding chemical reactions and phase transitions.</p>
+    <p><strong>Sources</strong><br>
+        - Callen, H. B. (1985). <em>Thermodynamics and an Introduction to Thermostatistics</em>. Wiley.<br>
+        - Atkins, P., & Friedman, R. (2011). <em>Molecular Thermodynamics of Biochemical Reactions</em>. Oxford University Press.
+    </p>
+
+    <h2 id="107">107. Tourism</h2>
+    <p><strong>Overview</strong><br>Tourism involves the activities of people traveling to and staying in places outside their usual environment for leisure, business, or other purposes.</p>
+    <p><strong>Key Aspects</strong><br>
+        - <strong>Destination Management:</strong> Strategies for promoting and managing tourist destinations.<br>
+        - <strong>Sustainable Tourism:</strong> Practices that aim to minimize the negative impacts of tourism on the environment and local cultures.
+    </p>
+    <p><strong>Applications</strong><br>Tourism impacts local economies, cultures, and environments, and involves various sectors, including transportation, hospitality, and recreation.</p>
+    <p><strong>Sources</strong><br>
+        - Cooper, C., et al. (2008). <em>Tourism: Principles and Practice</em>. Pearson.<br>
+        - Hall, C. M., & Page, S. J. (2014). <em>The Geography of Tourism and Recreation: Environment, Place, and Space</em>. Routledge.
+    </p>
+
+    <h2 id="108">108. Urban Studies</h2>
+    <p><strong>Overview</strong><br>Urban studies is the multidisciplinary field that examines cities and urban life.</p>
+    <p><strong>Key Areas</strong><br>
+        - <strong>Urban Planning:</strong> Design and regulation of land use and the built environment.<br>
+        - <strong>Social Dynamics:</strong> Analysis of social interactions and demographics within urban settings.
+    </p>
+    <p><strong>Applications</strong><br>Urban studies inform policies on housing, transportation, and infrastructure to improve the quality of life in urban areas.</p>
+    <p><strong>Sources</strong><br>
+        - Glaeser, E. L. (2011). <em>Triumph of the City: How Our Greatest Invention Makes Us Richer, Smarter, Greener, Healthier, and Happier</em>. Penguin Books.<br>
+        - Harvey, D. (2012). <em>Rebel Cities: From the Right to the City to the Urban Revolution</em>. Verso.
+    </p>
+
+    <h2 id="109">109. Virtual Reality</h2>
+    <p><strong>Overview</strong><br>Virtual reality (VR) is an immersive technology that simulates a three-dimensional environment using computer technology.</p>
+    <p><strong>Key Components</strong><br>
+        - <strong>Head-Mounted Displays:</strong> Devices worn on the head that display VR content.<br>
+        - <strong>Motion Tracking:</strong> Systems that track users' movements and adjust the VR environment accordingly.
+    </p>
+    <p><strong>Applications</strong><br>VR is used in gaming, education, healthcare, and training simulations to create interactive and immersive experiences.</p>
+    <p><strong>Sources</strong><br>
+        - Burdea, G., & Coiffet, P. (2003). <em>Virtual Reality Technology</em>. Wiley.<br>
+        - Sherman, W. R., & Craig, A. B. (2018). <em>Understanding Virtual Reality: Interface, Application, and Design</em>. Morgan Kaufmann.
+    </p>
+
+    <h2 id="110">110. World History</h2>
+    <p><strong>Overview</strong><br>World history studies the history of human civilization from a global perspective.</p>
+    <p><strong>Key Themes</strong><br>
+        - <strong>Civilizations and Empires:</strong> Examination of major civilizations and their impacts on world history.<br>
+        - <strong>Global Interactions:</strong> Analysis of how different regions and cultures have influenced each other throughout history.
+    </p>
+    <p><strong>Applications</strong><br>World history provides insights into cultural, political, and economic developments that have shaped the modern world.</p>
+    <p><strong>Sources</strong><br>
+        - Jones, E. L. (2003). <em>The European Miracle: Environments, Economies, and Geopolitics in the History of Europe and Asia</em>. Cambridge University Press.<br>
+        - Wright, J. (2004). <em>A Short History of Progress</em>. House of Anansi Press.
+    </p>
+
+    <h2 id="111">111. Xenophobia</h2>
+    <p><strong>Overview</strong><br>Xenophobia is the irrational fear or hatred of people from other countries or cultures.</p>
+    <p><strong>Key Aspects</strong><br>
+        - <strong>Social Impact:</strong> Xenophobia can lead to discrimination, exclusion, and violence against individuals perceived as outsiders.<br>
+        - <strong>Historical Context:</strong> Examines how xenophobic attitudes have influenced historical events and policies.
+    </p>
+    <p><strong>Applications</strong><br>Understanding xenophobia is essential for fostering inclusivity, promoting multiculturalism, and addressing prejudice and discrimination.</p>
+    <p><strong>Sources</strong><br>
+        - Essed, P. (1991). <em>Understanding Everyday Racism: An Interdisciplinary Theory</em>. Sage Publications.<br>
+        - Mudde, C., & Kaltwasser, C. R. (2017). <em>Populism: A Very Short Introduction</em>. Oxford University Press.
+    </p>
+
+    <h2 id="112">112. X-ray Technology</h2>
+    <p><strong>Overview</strong><br>X-ray technology uses high-energy electromagnetic radiation to view the internal structure of objects and bodies.</p>
+    <p><strong>Key Uses</strong><br>
+        - <strong>Medical Imaging:</strong> Used for diagnosing fractures, infections, and other conditions.<br>
+        - <strong>Security Screening:</strong> Employed in airports and other security-sensitive areas to inspect baggage.
+    </p>
+    <p><strong>Applications</strong><br>X-ray technology is crucial in medicine, security, and industrial applications for non-destructive testing.</p>
+    <p><strong>Sources</strong><br>
+        - Gelfand, A. E., & Smith, A. F. M. (1990). <em>Bayesian Statistics: Principles, Models, and Applications</em>. Oxford University Press.<br>
+        - Huda, W., & Ogden, K. M. (2019). <em>The Physics of Medical Imaging</em>. CRC Press.
+    </p>
+</body>
+</html>
+
+        </div>
+
+        <!-- Sites You Should Know -->
+        <div class="box" id="sites">
+            <h2>SITES YOU SHOULD KNOW</h2>
+            <ul>
+                <li><a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg: A vast collection of over 60,000 free eBooks, especially useful for literature enthusiasts.</a></li>
+                <li><a href="https://radio.garden/visit/livadia/8syHrSab" target="_blank">Radio Garden: Explore live radio stations worldwide by clicking on an interactive map.</a></li>
+                <li><a href="https://www.supercook.com/#/desktop" target="_blank">Supercook: Input ingredients you have at home to discover recipes you can make.</a></li>
+                <li><a href="https://downdetector.com/" target="_blank">DownDetector: Track website and app outages in real-time.</a></li>
+                <li><a href="https://www.techjunkie.com/" target="_blank">Tools.TechJunkie: Handy tech tools like PDF converters and video editing options.</a></li>
+                <li><a href="https://www.worldometers.info/" target="_blank">Worldometers: Provides real-time global statistics.</a></li>
+                <li><a href="https://prlivnote.com/?ref=glw&gad_source=1&gclid=CjwKCAjw0aS3BhA3EiwAKaD2ZRjqKvs6AkbVbltFFG9iH74yXElOuPGIrgPukxgydx3iRTG_lyuCyRoC2BUQAvD_BwE" target="_blank">Privnote: Create self-destructing private messages.</a></li>
+                <li><a href="https://uk.camelcamelcamel.com/" target="_blank">CamelCamelCamel: Tracks Amazon product prices for the best deals.</a></li>
+                <li><a href="https://www.open.ac.uk/?ps_kw=open%20uni&cid=&gad_source=1&gclid=CjwKCAjw0aS3BhA3EiwAKaD2Zbew8xhry5p5oX8g4ZH-4NPuId-zEYhHo3ZMAPYz_dg2BpLmWkmD4RoCWLoQAvD_BwE&gclsrc=aw.ds" target="_blank">OpenLearn: Free courses from The Open University covering a wide range of topics.</a></li>
+                <li><a href="https://www.futurelearn.com/" target="_blank">FutureLearn: Offers online courses from top universities and organizations globally.</a></li>
+                <li><a href="https://el.khanacademy.org/" target="_blank">Khan Academy: A free resource for learning subjects like math, science, and more.</a></li>
+                <li><a href="https://www.coursera.org/courseraplus/special/global-thirty-2024?utm_medium=sem&utm_source=gg&utm_campaign=b2c_emea__coursera_ftcof_coursera-plus_arte_march_24_dr_geo-multi-set1_pmax_gads_lg-all&campaignid=21667235987&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adposition=&creativeid=&hide_mobile_promo&gad_source=1&gclid=CjwKCAjw0aS3BhA3EiwAKaD2ZbfFoFmGrlgZuWlED1kmbhEpLV2yayJKDVkhhygi5VCQdQ0eyfEbkxoCcUkQAvD_BwE" target="_blank">Coursera for Campus: Offers free learning modules from accredited institutions across various disciplines.</a></li>
+            </ul>
+        </div>
+
+        <!-- Πρώτο Παιχνίδι -->
+        <div class="box" id="game-1">
+            <h2>2D Game - Adventure Runner</h2>
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+            <div id="menu">
+                <button class="menu-button" onclick="startGame()">Start Game</button>
+                <button class="menu-button" onclick="restartGame()">Reset Game</button>
+                <button class="menu-button" onclick="nextStage()">Next Stage</button>
+                <div class="controls">
+                    <label for="music-volume">Music Volume:</label>
+                    <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" onchange="adjustVolume()">
+                    <br>
+                    <label for="sfx-volume">SFX Volume:</label>
+                    <input type="range" id="sfx-volume" min="0" max="1" step="0.1" value="0.5" onchange="adjustSfxVolume()">
+                </div>
+            </div>
+        </div>
+
+        <!-- Δεύτερο Παιχνίδι -->
+        <div class="box" id="game-2">
+            <h2>Advanced Game - Space Explorer</h2>
+            <canvas id="gameCanvas2" width="800" height="600"></canvas>
+
+            <div id="advanced-menu">
+                <button class="menu-button" onclick="startAdvancedGame()">Start Game</button>
+                <button class="menu-button" onclick="restartAdvancedGame()">Reset Game</button>
+                <div class="controls">
+                    <label for="adv-music-volume">Music Volume:</label>
+                    <input type="range" id="adv-music-volume" min="0" max="1" step="0.1" value="0.5" onchange="adjustAdvVolume()">
+                    <br>
+                    <label for="adv-sfx-volume">SFX Volume:</label>
+                    <input type="range" id="adv-sfx-volume" min="0" max="1" step="0.1" value="0.5" onchange="adjustAdvSfxVolume()">
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz -->
+        <div class="box" id="
+
+quiz-section">
+            <h2>QUIZ</h2>
+            <div id="quiz-content">
+                <!-- Example of a quiz question -->
+                <h3>General Knowledge Quiz</h3>
+                <div class="quiz">
+                    <h4>1. What is the capital of France?</h4>
+                    <form>
+                        <input type="radio" id="paris" name="question1" value="paris">
+                        <label for="paris">Paris</label><br>
+                        <input type="radio" id="rome" name="question1" value="rome">
+                        <label for="rome">Rome</label><br>
+                        <input type="radio" id="berlin" name="question1" value="berlin">
+                        <label for="berlin">Berlin</label><br>
+                        <input type="radio" id="madrid" name="question1" value="madrid">
+                        <label for="madrid">Madrid</label><br>
+                    </form>
+                </div>
+                <div class="quiz">
+                    <h4>2. What is the chemical symbol for water?</h4>
+                    <form>
+                        <input type="radio" id="h2o" name="question2" value="h2o">
+                        <label for="h2o">H2O</label><br>
+                        <input type="radio" id="co2" name="question2" value="co2">
+                        <label for="co2">CO2</label><br>
+                        <input type="radio" id="o2" name="question2" value="o2">
+                        <label for="o2">O2</label><br>
+                        <input type="radio" id="na" name="question2" value="na">
+                        <label for="na">Na</label><br>
+                    </form>
+                </div>
+                <!-- Add more questions as needed -->
+            </div>
+        </div>
+
+        <!-- YouTube Channel -->
+        <div class="box" id="youtube-section">
+            <h2>YOUTUBE</h2>
+            <a href="https://www.youtube.com/@rapidbrainwave" target="_blank">
+                <img src="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj" alt="RapidBrainwave" width="100">
+                <p>Visit my channel - RapidBrainwave</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Marios D. Tasoulas</p>
+        <p>Code written by ChatGPT</p>
+    </footer>
+
+    <!-- Αρχεία ήχου για το πρώτο παιχνίδι -->
+    <audio id="backgroundMusic" loop>
+        <source src="background-music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="jumpSound">
+        <source src="jump-sound.mp3" type="audio/mp3">
+    </audio>
+    <audio id="winSound">
+        <source src="win-sound.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loseSound">
+        <source src="lose-sound.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Αρχεία ήχου για το δεύτερο παιχνίδι -->
+    <audio id="adv-backgroundMusic" loop>
+        <source src="adv-background-music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="adv-actionSound">
+        <source src="adv-action-sound.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        // Πρώτο Παιχνίδι
+        let canvas = document.getElementById("gameCanvas");
+        let ctx = canvas.getContext("2d");
+        let score = 0;
+        let level = 1;
+        let gameRunning = false;
+        let player = { x: 50, y: 550, width: 40, height: 40, color: 'blue', speed: 5 };
+
+        let backgroundMusic = document.getElementById('backgroundMusic');
+        let jumpSound = document.getElementById('jumpSound');
+        let winSound = document.getElementById('winSound');
+        let loseSound = document.getElementById('loseSound');
+
+        let musicVolume = document.getElementById('music-volume').value;
+        backgroundMusic.volume = musicVolume;
+
+        let sfxVolume = document.getElementById('sfx-volume').value;
+
+        function startGame() {
+            backgroundMusic.play();
+            gameRunning = true;
+            score = 0;
+            level = 1;
+            player.x = 50;
+            player.y = 550;
+            gameLoop();
+        }
+
+        function restartGame() {
+            score = 0;
+            player.x = 50;
+            player.y = 550;
+            gameRunning = true;
+            gameLoop();
+        }
+
+        function nextStage() {
+            level++;
+            player.x = 50;
+            player.y = 550;
+            score = 0;
+            gameLoop();
+        }
+
+        function adjustVolume() {
+            backgroundMusic.volume = document.getElementById('music-volume').value;
+        }
+
+        function adjustSfxVolume() {
+            sfxVolume = document.getElementById('sfx-volume').value;
+        }
+
+        function gameLoop() {
+            if (!gameRunning) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Σχεδίαση παίκτη
+            ctx.fillStyle = player.color;
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+
+            // Ενημέρωση και εμφάνιση σκορ και επιπέδου
+            score++;
+            ctx.fillStyle = 'black';
+            ctx.font = '20px Arial';
+            ctx.fillText(`Score: ${score}`, 10, 30);
+            ctx.fillText(`Level: ${level}`, 10, 60);
+
+            // Έλεγχος νίκης/ήττας
+            if (score >= 500) {
+                ctx.font = '40px Arial Black';
+                ctx.fillStyle = 'green';
+                ctx.fillText('CONGRATULATIONS!', canvas.width / 2 - 200, canvas.height / 2);
+                winSound.volume = sfxVolume;
+                winSound.play();
+                gameRunning = false;
+                return;
+            }
+
+            // Κίνηση παίκτη
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'ArrowUp') {
+                    player.y -= player.speed;
+                    jumpSound.volume = sfxVolume;
+                    jumpSound.play();
+                } else if (event.code === 'ArrowDown') {
+                    player.y += player.speed;
+                } else if (event.code === 'ArrowLeft') {
+                    player.x -= player.speed;
+                } else if (event.code === 'ArrowRight') {
+                    player.x += player.speed;
+                }
+            });
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Δεύτερο Παιχνίδι (Πιο Πολύπλοκο)
+        let canvas2 = document.getElementById("gameCanvas2");
+        let ctx2 = canvas2.getContext("2d");
+        let advGameRunning = false;
+        let advPlayer = { x: 400, y: 550, width: 50, height: 50, color: 'red', speed: 7 };
+        let advBackgroundMusic = document.getElementById('adv-backgroundMusic');
+        let advActionSound = document.getElementById('adv-actionSound');
+
+        let advMusicVolume = document.getElementById('adv-music-volume').value;
+        advBackgroundMusic.volume = advMusicVolume;
+
+        let advSfxVolume = document.getElementById('adv-sfx-volume').value;
+
+        function startAdvancedGame() {
+            advBackgroundMusic.play();
+            advGameRunning = true;
+            advPlayer.x = 400;
+            advPlayer.y = 550;
+            advancedGameLoop();
+        }
+
+        function restartAdvancedGame() {
+            advPlayer.x = 400;
+            advPlayer.y = 550;
+            advGameRunning = true;
+            advancedGameLoop();
+        }
+
+        function adjustAdvVolume() {
+            advBackgroundMusic.volume = document.getElementById('adv-music-volume').value;
+        }
+
+        function adjustAdvSfxVolume() {
+            advSfxVolume = document.getElementById('adv-sfx-volume').value;
+        }
+
+        function advancedGameLoop() {
+            if (!advGameRunning) return;
+
+            ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+
+            // Σχεδίαση παίκτη
+            ctx2.fillStyle = advPlayer.color;
+            ctx2.fillRect(advPlayer.x, advPlayer.y, advPlayer.width, advPlayer.height);
+
+            // Κίνηση παίκτη
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'KeyW') {
+                    advPlayer.y -= advPlayer.speed;
+                    advActionSound.volume = advSfxVolume;
+                    advActionSound.play();
+                } else if (event.code === 'KeyS') {
+                    advPlayer.y += advPlayer.speed;
+                } else if (event.code === 'KeyA') {
+                    advPlayer.x -= advPlayer.speed;
+                } else if (event.code === 'KeyD') {
+
+
+                    advPlayer.x += advPlayer.speed;
+                }
+            });
+
+            requestAnimationFrame(advancedGameLoop);
+        }
+
+        // Αρχικοποίηση
+        window.onload = function() {
+        };
+    </script>
+
+</body>
+</html>
