@@ -16,11 +16,11 @@
             min-height: 100vh;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #d9dda7;
+            color: #000000;
             padding: 15px 0;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
         header h1 {
             margin: 0;
@@ -36,7 +36,7 @@
         }
         .box {
             background-color: #fff;
-            border: 1px solid #ddd;
+            border: 1px solid #000000;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
