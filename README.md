@@ -2,74 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RapidBrainwave</title>
     <link rel="icon" href="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj">
     <style>
         body {
             background-color: #f9dd16;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        h1, h2 {
-            font-family: 'Arial Black', sans-serif;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
             text-align: center;
-            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-family: 'Arial Black', sans-serif;
         }
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 20px;
             padding: 20px;
+            flex: 1;
         }
         .box {
             background-color: #fff;
-            border: 2px solid #000;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .box h2 {
-            margin-bottom: 15px;
+            margin: 0 0 15px;
+            font-size: 1.5rem;
         }
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            margin-top: 20px;
-            border-top: 2px solid #000;
-        }
-        /* Styles for the games */
-        #gameCanvas, #gameCanvas2 {
-            background-color: #e0e0e0;
-            display: block;
-            margin: 0 auto;
-            border: 3px solid black;
+        .box canvas {
+            max-width: 100%;
+            border: 2px solid #000;
+            border-radius: 4px;
         }
         .menu-button {
             padding: 10px 20px;
-            margin: 10px;
             background-color: #444;
-            color: white;
+            color: #fff;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s ease;
         }
         .menu-button:hover {
             background-color: #555;
         }
-        .controls {
-            margin: 20px 0;
+        .statistics {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
-        .controls input {
-            margin: 5px;
+        .statistics h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-top: 1px solid #444;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .statistics {
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .box h2 {
+                font-size: 1.25rem;
+            }
+            .menu-button {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .statistics {
+                width: calc(100% - 20px);
+                position: static;
+                margin: 10px auto;
+            }
+            header h1 {
+                font-size: 1.25rem;
+            }
+            .box h2 {
+                font-size: 1rem;
+            }
+            .menu-button {
+                width: 100%;
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>RapidBrainwave</h1>
+    </header>
+
+    <div class="statistics">
+        <h3>Site Statistics</h3>
+        <p>Daily Visits: <span id="dailyVisits">0</span></p>
+        <p>Weekly Visits: <span id="weeklyVisits">0</span></p>
+        <p>Total Visits: <span id="totalVisits">0</span></p>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h2>Game 1</h2>
+            <canvas id="gameCanvas" width="300" height="200"></canvas>
+            <button class="menu-button">Play</button>
+        </div>
+        <div class="box">
+            <h2>Game 2</h2>
+            <canvas id="gameCanvas2" width="300" height="200"></canvas>
+            <button class="menu-button">Play</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RapidBrainwave. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate fetching statistics data
+            const dailyVisits = Math.floor(Math.random() * 1000);
+            const weeklyVisits = Math.floor(Math.random() * 7000);
+            const totalVisits = Math.floor(Math.random() * 50000);
+
+            // Update statistics in DOM
+            document.getElementById('dailyVisits').textContent = dailyVisits;
+            document.getElementById('weeklyVisits').textContent = weeklyVisits;
+            document.getElementById('totalVisits').textContent = totalVisits;
+        });
+    </script>
+
+</body>
+</html>
+
 
     <header>
         <h1>RapidBrainwave</h1>
