@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RapidBrainwave - Encyclopedia and 2D Game</title>
+    <meta name="description" content="Explore RapidBrainwave's Encyclopedia and 2D Game!">
+    <meta property="og:title" content="RapidBrainwave - Encyclopedia and 2D Game">
+    <meta property="og:description" content="Educational content and an adventure game in one place.">
+    <meta property="og:image" content="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj">
     <style>
+        /* Βασικά στυλ για την ιστοσελίδα */
         body {
             font-family: Arial, sans-serif;
             color: black;
@@ -93,6 +98,7 @@
     </style>
 </head>
 <body>
+    <!-- Κεφαλίδα της ιστοσελίδας -->
     <header>
         <img src="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj" alt="RapidBrainwave Logo" id="logo">
         <nav>
@@ -105,38 +111,271 @@
     </header>
 
     <main>
-        <!-- Button Navigation -->
+        <!-- Πλοήγηση με κουμπιά -->
         <div class="button-container">
             <div><a href="#encyclopedia">ENCYCLOPEDIA</a></div>
             <div><a href="#game">2D ADVENTURE GAME</a></div>
             <div><a href="https://www.youtube.com/@rapidbrainwave" target="_blank">RAPIDBRAINWAVE YOUTUBE</a></div>
         </div>
 
-        <!-- Encyclopedia -->
+        <!-- Ενότητα Εγκυκλοπαίδειας -->
+            
+    <main>
         <section id="encyclopedia">
-            <h2>Encyclopedia</h2>
+         <h2>Encyclopedia</h2>
             <img src="https://st.depositphotos.com/1000152/4215/i/450/depositphotos_42154745-stock-photo-open-books.jpg" alt="Encyclopedia Image">
             <div id="encyclopedia-content">
-                <h3>1. Reproduction</h3>
-                <p>Reproduction is the process by which organisms create offspring, ensuring the continuity of the species...</p>
-                <h3>2. Cell Biology</h3>
-                <p>Cell biology is the study of cell structure and function, which is the fundamental unit of life...</p>
-                <h3>3. Genetics</h3>
-                <p>Genetics is the branch of biology that studies the inheritance of traits from parents to offspring via genes...</p>
-                <!-- More paragraphs for the encyclopedia (You can add more sections up to 60 here) -->
-                <h3>60. Meteorology</h3>
-                <p>Meteorology is the science that studies the atmosphere and weather phenomena...</p>
+                <div class="encyclopedia-item">
+                    <h3>1. Reproduction</h3>
+                    <p>Reproduction is the process by which organisms create offspring, ensuring the continuity of the species...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>2. Cell Biology</h3>
+                    <p>Cell biology is the study of cell structure and function, which is the fundamental unit of life...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>3. Genetics</h3>
+                    <p>Genetics is the branch of biology that studies the inheritance of traits from parents to offspring via genes...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>4. Anatomy</h3>
+                    <p>Anatomy is the branch of science concerned with the bodily structure of humans, animals, and other living organisms...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>5. Physiology</h3>
+                    <p>Physiology studies the functions and mechanisms in living organisms, explaining how they interact with their environment...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>6. Evolution</h3>
+                    <p>Evolution describes how organisms change over time through genetic variation and natural selection...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>7. Ecology</h3>
+                    <p>Ecology is the study of the interactions between living organisms and their environment...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>8. Microbiology</h3>
+                    <p>Microbiology is the study of microorganisms, including bacteria, viruses, fungi, and protozoa...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>9. Biochemistry</h3>
+                    <p>Biochemistry is the branch of science that explores the chemical processes within and related to living organisms...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>10. Botany</h3>
+                    <p>Botany is the scientific study of plants, including their physiology, structure, growth, and ecology...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>11. Zoology</h3>
+                    <p>Zoology is the branch of biology that studies animals and their behavior, physiology, and classification...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>12. Marine Biology</h3>
+                    <p>Marine biology is the study of ocean ecosystems, marine organisms, and their interactions...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>13. Biotechnology</h3>
+                    <p>Biotechnology involves the use of living systems and organisms to develop products and technologies...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>14. Immunology</h3>
+                    <p>Immunology is the study of the immune system and the body's defense mechanisms against pathogens...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>15. Neuroscience</h3>
+                    <p>Neuroscience is the scientific study of the nervous system and the brain's role in behavior and cognition...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>16. Physiology of Exercise</h3>
+                    <p>This field examines the body's responses and adaptations to physical activity and exercise...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>17. Anthropology</h3>
+                    <p>Anthropology is the study of human societies, cultures, and their development...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>18. Sociology</h3>
+                    <p>Sociology is the study of social behavior, society, patterns of social relationships, and culture...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>19. Psychology</h3>
+                    <p>Psychology is the scientific study of behavior and mental processes...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>20. Criminology</h3>
+                    <p>Criminology is the study of crime, criminal behavior, and the criminal justice system...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>21. Economics</h3>
+                    <p>Economics studies the production, distribution, and consumption of goods and services...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>22. Political Science</h3>
+                    <p>Political science is the study of politics, government systems, and political behavior...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>23. History</h3>
+                    <p>History is the study of past events, particularly in human affairs...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>24. Geography</h3>
+                    <p>Geography is the study of the Earth's landscapes, environments, and the relationships between people and their environments...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>25. Astronomy</h3>
+                    <p>Astronomy is the study of celestial objects, space, and the universe as a whole...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>26. Meteorology</h3>
+                    <p>Meteorology is the science that studies the atmosphere and weather phenomena...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>27. Geology</h3>
+                    <p>Geology is the study of the Earth, its structure, processes, and history...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>28. Archaeology</h3>
+                    <p>Archaeology is the study of human history and prehistory through the excavation of sites and analysis of artifacts...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>29. Paleontology</h3>
+                    <p>Paleontology is the study of the history of life on Earth through fossil records...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>30. Environmental Science</h3>
+                    <p>Environmental science is the study of the interactions between the physical, chemical, and biological components of the environment...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>31. Urban Studies</h3>
+                    <p>Urban studies explore the social, political, and economic aspects of cities and urban areas...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>32. Demography</h3>
+                    <p>Demography is the statistical study of populations, including the structure, distribution, and trends...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>33. Information Technology</h3>
+                    <p>Information technology is the study and application of computer systems and networks for processing and distributing data...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>34. Computer Science</h3>
+                    <p>Computer science is the study of computers, computation, and information processing...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>35. Cybersecurity</h3>
+                    <p>Cybersecurity focuses on protecting computer systems, networks, and data from cyber attacks...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>36. Robotics</h3>
+                    <p>Robotics involves the design, construction, operation, and use of robots...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>37. Artificial Intelligence</h3>
+                    <p>Artificial intelligence (AI) is the simulation of human intelligence in machines...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>38. Machine Learning</h3>
+                    <p>Machine learning is a subset of AI that enables computers to learn from data and improve performance without being explicitly programmed...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>39. Data Science</h3>
+                    <p>Data science involves using scientific methods, algorithms, and systems to extract insights from structured and unstructured data...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>40. Blockchain Technology</h3>
+                    <p>Blockchain technology is a decentralized digital ledger used to record transactions across many computers...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>41. Cloud Computing</h3>
+                    <p>Cloud computing provides on-demand availability of computer resources over the internet...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>42. Social Media</h3>
+                    <p>Social media platforms enable users to create, share, and interact with content online...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>43. E-commerce</h3>
+                    <p>E-commerce refers to buying and selling goods or services using the internet...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>44. Marketing</h3>
+                    <p>Marketing involves promoting and selling products or services, including market research and advertising...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>45. Finance</h3>
+                    <p>Finance is the study of managing monetary resources, investments, and capital markets...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>46. Accounting</h3>
+                    <p>Accounting is the process of recording, summarizing, and analyzing financial transactions...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>47. Business Administration</h3>
+                    <p>Business administration encompasses the management of a company's operations and resources...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>48. Entrepreneurship</h3>
+                    <p>Entrepreneurship is the process of designing, launching, and running a new business...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>49. Hospitality Management</h3>
+                    <p>Hospitality management is the study of the hospitality industry, including hotels, restaurants, and tourism...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>50. Supply Chain Management</h3>
+                    <p>Supply chain management involves the flow of goods and services from production to consumption...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>51. Human Resource Management</h3>
+                    <p>Human resource management focuses on recruiting, training, and managing an organization's workforce...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>52. Public Relations</h3>
+                    <p>Public relations involves managing communication between an organization and its publics...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>53. Graphic Design</h3>
+                    <p>Graphic design is the art and practice of planning and projecting ideas and experiences through visual and textual content...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>54. Visual Arts</h3>
+                    <p>Visual arts encompass various forms of art that are primarily visual in nature, such as painting, sculpture, and photography...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>55. Performing Arts</h3>
+                    <p>Performing arts include forms of creative activity that are performed in front of an audience, such as theater, dance, and music...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>56. Literature</h3>
+                    <p>Literature is the body of written works, including poetry, prose, and drama...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>57. Philosophy</h3>
+                    <p>Philosophy involves the study of fundamental questions regarding existence, knowledge, values, reason, and mind...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>58. Theology</h3>
+                    <p>Theology is the study of the nature of the divine, religious beliefs, and the practice of faith...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>59. Ethics</h3>
+                    <p>Ethics is the philosophical study of morality, examining what is right and wrong, good and bad...</p>
+                </div>
+                <div class="encyclopedia-item">
+                    <h3>60. History of Science</h3>
+                    <p>The history of science examines how scientific knowledge has developed over time and its impact on society...</p>
+                </div>
             </div>
         </section>
+    </main>
 
-        <!-- 2D Game -->
+        <!-- Ενότητα Παιχνιδιού 2D -->
         <section id="game">
             <h2>2D Adventure Game</h2>
             <canvas id="gameCanvas" width="800" height="600"></canvas>
             <script>
                 const canvas = document.getElementById('gameCanvas');
                 const ctx = canvas.getContext('2d');
-
                 let player = { x: 50, y: 500, width: 50, height: 50, color: 'blue', speed: 5 };
                 let obstacles = [
                     { x: 200, y: 450, width: 50, height: 50 },
@@ -165,17 +404,13 @@
 
                 function checkCollision() {
                     for (let obstacle of obstacles) {
-                        if (
-                            player.x < obstacle.x + obstacle.width &&
+                        if (player.x < obstacle.x + obstacle.width &&
                             player.x + player.width > obstacle.x &&
                             player.y < obstacle.y + obstacle.height &&
-                            player.y + player.height > obstacle.y
-                        ) {
+                            player.y + player.height > obstacle.y) {
                             gameOver = true;
                         }
                     }
-
-                    // Check win condition
                     if (player.x > canvas.width - player.width) {
                         if (level >= 100) {
                             win = true;
@@ -200,26 +435,19 @@
                         drawObstacles();
                         checkCollision();
                         requestAnimationFrame(gameLoop);
-                    } else if (win) {
+                    } else {
                         ctx.clearRect(0, 0, canvas.width, canvas.height);
                         ctx.font = '40px Arial';
-                        ctx.fillText('You Win! Congratulations!', 200, 300);
-                    } else if (gameOver) {
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-                        ctx.font = '40px Arial';
-                        ctx.fillText('Game Over! Try Again!', 200, 300);
+                        ctx.fillText(win ? 'You Win! Congratulations!' : 'Game Over! Try Again.', 150, 300);
                     }
                 }
 
-                document.addEventListener('keydown', function(event) {
-                    if (event.key === 'ArrowRight') {
-                        player.x += player.speed;
-                    } else if (event.key === 'ArrowLeft') {
-                        player.x -= player.speed;
-                    } else if (event.key === 'ArrowUp') {
-                        player.y -= player.speed;
-                    } else if (event.key === 'ArrowDown') {
-                        player.y += player.speed;
+                document.addEventListener('keydown', event => {
+                    switch (event.key) {
+                        case 'ArrowRight': if (player.x + player.width < canvas.width) player.x += player.speed; break;
+                        case 'ArrowLeft': if (player.x > 0) player.x -= player.speed; break;
+                        case 'ArrowUp': if (player.y > 0) player.y -= player.speed; break;
+                        case 'ArrowDown': if (player.y + player.height < canvas.height) player.y += player.speed; break;
                     }
                 });
 
@@ -228,6 +456,9 @@
         </section>
     </main>
 
+    <!-- Υποσέλιδο -->
     <footer>
-        <p>Created by: Marios D. Tasoulas
-         <p>Code Writter by: Chat GPT
+        <p>&copy; 2024 RapidBrainwave. <a href="https://www.youtube.com/@rapidbrainwave" target="_blank">Visit our YouTube channel</a>.</p>
+    </footer>
+</body>
+</html>
