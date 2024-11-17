@@ -6,66 +6,48 @@
     <title>RapidBrainwave</title>
     <link rel="icon" href="https://yt3.googleusercontent.com/dnBJtL6OpEPnfeIfXrAz7QCp0PL3uw4AARWyWM2g59vu6ctGab6sYnnAmJi9sCVHxmP_GvQlNYQ=s160-c-k-c0x00ffffff-no-rj">
     <style>
-        body {
-            background-color: #f9dd16;
+        body {  background-color: #f9dd16;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #333;
+            min-height: 100vh; }
+        header { background-color: #333;
             color: #fff;
             padding: 15px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        header h1 {
-            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+        header h1 { margin: 0;
             font-size: 2rem;
-            font-family: 'Arial Black', sans-serif;
-        }
-        .container {
-            display: grid;
+            font-family: 'Arial Black', sans-serif; }
+        .container {display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 20px;
             padding: 20px;
-            flex: 1;
-        }
-        .box {
-            background-color: #fff;
+            flex: 1; }
+        .box {background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .box h2 {
-            margin: 0 0 15px;
-            font-size: 1.5rem;
-        }
-        .box canvas {
-            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .box h2 {  margin: 0 0 15px;
+            font-size: 1.5rem; }
+        .box canvas {max-width: 100%;
             border: 2px solid #000;
-            border-radius: 4px;
-        }
-        .menu-button {
-            padding: 10px 20px;
+            border-radius: 4px; }
+        .menu-button {  padding: 10px 20px;
             background-color: #444;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        .menu-button:hover {
-            background-color: #555;
-        }
-        .statistics {
-            position: fixed;
+            transition: background-color 0.3s ease; }
+        .menu-button:hover 
+        { background-color: #555;  }
+        .statistics {position: fixed;
             top: 20px;
             right: 20px;
             background-color: #fff;
@@ -73,19 +55,15 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+            z-index: 1000; }
         .statistics h3 {
             margin: 0 0 10px;
-            font-size: 1.2rem;
-        }
-        footer {
-            text-align: center;
+            font-size: 1.2rem; }
+        footer { text-align: center;
             padding: 20px;
             background-color: #333;
             color: #fff;
-            border-top: 1px solid #444;
-        }
+            border-top: 1px solid #444;  }
         footer p {
             margin: 0;
         }
